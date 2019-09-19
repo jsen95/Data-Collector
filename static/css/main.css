@@ -19,3 +19,16 @@ html, body{
 	color: #DDCCEE;
 	margin-top: 80px;
 }
+
+.container form{
+	margin: 20px;
+}
+
+.container input{
+	width: 350px;
+	height: 15px;
+	font-size: 15px;
+	margin: 2px;
+	padding: 20px;
+	transition: all 0.2s ease-in-out;
+}
