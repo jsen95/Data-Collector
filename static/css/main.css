@@ -2,6 +2,7 @@ html, body{
 	height: 100%;
 	margin: 0;
 }
+
 .container{
 	margin: 0 auto;
 	width: 100%;
@@ -10,4 +11,11 @@ html, body{
 	color: #e6ffff;
 	overflow: hidden;
 	text-align: center;
+}
+
+.container h1{
+	font-family: Arial, sans-serif;
+	font-size: 30px;
+	color: #DDCCEE;
+	margin-top: 80px;
 }
