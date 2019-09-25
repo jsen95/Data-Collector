@@ -32,3 +32,10 @@ html, body{
 	padding: 20px;
 	transition: all 0.2s ease-in-out;
 }
+
+.container button{
+	width: 70px;
+	height: 30px;
+	background-color: steelblue;
+	margin: 3px;
+}
