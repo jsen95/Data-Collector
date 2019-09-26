@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -20,11 +20,14 @@ class Data(db.Model):
 def index():
 	return render_template("index.html")
 
-@app.route("/success")
+@app.route("/success", methods=["POST"])
 def success():
-	return render_template("success.html")
-
-
+	if request.method == "POST":
+		email = request.form["email_name"]
+		height = request.form["height_name"]
+		if email == "" or height == "":
+			return render_template("index.html", message="Please enter required fields")
+		
 if __name__ == '__main__':
 	app.debug=True
 	app.run()
