@@ -27,6 +27,12 @@ def success():
 		height = request.form["height_name"]
 		if email == "" or height == "":
 			return render_template("index.html", message="Please enter required fields")
+		if db.session.query(Data).filter(Data.email_ ==email).count() == 0:
+			data=Data(email, height)
+			db.session.add(data)
+			db.session.commit()
+			return render_template("success.html")
+		return render_template("index.html", message= "Seems like we've got something from that email already!")
 		
 if __name__ == '__main__':
 	app.debug=True
